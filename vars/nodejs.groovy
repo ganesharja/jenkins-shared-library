@@ -1,4 +1,4 @@
-def linkchecks() {
+def lintchecks() {
         sh "echo Installing JSlist"
         sh "npm i jslint"
         sh "echo starting lintchecks for ${COMPONENT}"
