@@ -27,7 +27,7 @@ def call () {
             stage('Sonar Checks') {
                 steps {
                     sh "Excuting sonarchecks"
-                    sh "sonar-scanner -Dsonar.host.url=http://${SONAR_URL}:9000/ $ARGS -Dsonar.projectKey=cart -Dsonar.login=admin -Dsonar.password=password"
+                    sh "sonar-scanner -Dsonar.host.url=http://${SONAR_URL}:9000/ -Dsonar.sources=. -Dsonar.projectKey=cart -Dsonar.login=admin -Dsonar.password=password"
                     // sh "curl https://gitlab.com/thecloudcareers/opensource/-/raw/master/lab-tools/sonar-scanner/quality-gate > quality-gate.sh"
                 }
             }
