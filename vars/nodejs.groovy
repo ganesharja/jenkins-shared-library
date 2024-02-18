@@ -14,6 +14,7 @@ def call () {
         agent any
         environment {
             SONAR_URL = "172.31.9.210"
+            SONAR_CRED  = credentials('SONAR_CRED')
         }
         stages {
             stage('Lint Checks') {
